@@ -17,8 +17,7 @@
                 <input type="text" name="name" placeholder="Your name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''?>">
                 <input type="text" name="emailphone" placeholder="Your email or phone" value="<?php echo isset($_POST['emailphone']) ? $_POST['emailphone']: ''?>">
                 <input type="text" name="subject" placeholder="Subject" value="<?php echo isset($_POST['subject']) ? $_POST['subject'] : ''?>">
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Your message"><?php echo isset($_POST['message']) ? $_POST['message'] : ''?>
-                </textarea>
+                <textarea name="message" id="" cols="30" rows="8" placeholder="Your message"><?php echo isset($_POST['message']) ? $_POST['message'] : ''?></textarea>
                 <div class="select-files">
                     <input type="file" name="picture" id="picture">
                     <label class="button file-button" for="picture">Pic</label>

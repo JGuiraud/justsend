@@ -1,0 +1,160 @@
+body {
+    background-color: #EAEAEA;
+    font-family: "Andale Mono";
+}
+
+.body-read {
+    height: 95vh;
+    display: grid;
+}
+
+.container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container--post, .container--read {
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content {
+    width: 90%;
+}
+
+.content--read {
+    font-family: system-ui;
+}
+
+.content--read .header div{
+    margin-bottom: 10px;
+}
+
+input:not([type="submit"]) {
+    height: 40px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+textarea {
+    padding-top: 10px;
+}
+
+input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.select-files {
+    display: flex;
+}
+
+.button.file-button {
+    height: 100%;
+
+}
+
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #09B6A9;
+    color: white;
+    padding: 15px 40px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 150px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.button--yellow {
+    background-color: #F3AF2D;
+    /*height: 100%;*/
+
+}
+
+.button--full-width {
+    width: auto;
+}
+
+.button--delete {
+    background-color: transparent;
+    text-decoration: underline;
+    color: red;
+    border: none;
+}
+
+.button--greyedout {
+    background-color: #cdcdcd;
+}
+
+h1 {
+    color: #1d743a;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.success {
+    text-align: center;
+    font-size: 30px;
+}
+
+.success--mini {
+    font-size: 16px;
+    color: green;
+}
+
+.code {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.underline {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+.image-container img {
+    max-width: 100%;
+}

@@ -8,9 +8,11 @@
         $image="";
         $message="";
         $id="";
+        $queryIsOk=0;
 
         $query = "SELECT * FROM messages WHERE code ='$code'";
         if ($result = mysqli_query($db, $query)) {
+            $queryIsOk=1;
             while ($row = mysqli_fetch_row($result)) {
                 $id = $row[0];
                 $name = $row[1];
@@ -20,7 +22,7 @@
                 $image = $row[6];
             }
         } else {
-            'error: ' . $db->error;
+            $queryIsOk=0;
         }
     }
 ?>

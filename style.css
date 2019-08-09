@@ -1,6 +1,11 @@
 body {
     background-color: #EAEAEA;
-    font-family: "Andale Mono";
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: "Andale Mono" !important;
 }
 
 .body-read {
@@ -9,32 +14,32 @@ body {
 }
 
 .container {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr 200px;
 }
 
 .container--post, .container--read {
-    display: flex;
-    justify-content: flex-start;
-    height: auto;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr;
 }
+
 
 form {
+    display: grid;
+    grid-template-rows: 1fr 200px;
+    height: 100%;
+
+}
+
+form .content {
+    width: 90%;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-
 }
 
-.content {
-    width: 90%;
-}
-
-.content--read {
-    font-family: system-ui;
-}
 
 .content--read .header div{
     margin-bottom: 10px;
@@ -68,10 +73,24 @@ input[type="file"] {
 }
 
 .button.file-button {
-    height: 100%;
-
+    width: 100%;
+    position: relative;
 }
 
+
+#displayimage {
+    position: absolute;
+    width: 40px;
+    left: 6px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.button-cont, .button-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .button {
     display: flex;
@@ -80,26 +99,41 @@ input[type="file"] {
     background-color: #09B6A9;
     color: white;
     padding: 15px 40px;
-    width: 200px;
     text-align: center;
     margin-bottom: 10px;
-    border-radius: 150px;
     font-size: 18px;
     text-decoration: none;
+    border: 0;
+}
+
+.button-inline {
+    background-color: #09B6A9;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    border: 0;
+}
+
+.flex {
+    display: flex;
 }
 
 .button--yellow {
     background-color: #F3AF2D;
-    /*height: 100%;*/
-
 }
 
-.button--full-width {
+/*
+a.button {
     width: auto;
+}
+*/
+
+a.button--full-width, input.button--full-width {
+    width: 100%;
 }
 
 .button--delete {
-    background-color: transparent;
+    background-color: #ff707d;
     text-decoration: underline;
     color: red;
     border: none;
@@ -113,11 +147,21 @@ h1 {
     color: #1d743a;
     font-weight: bold;
     font-size: 40px;
+    text-align: center;
 }
 
 .success {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
+    color: #09B6A9;
+    margin-bottom: 20px;
+}
+
+.warning {
+    color: #F3AF2D;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 .success--mini {
@@ -129,6 +173,10 @@ h1 {
     font-weight: bold;
     font-size: 40px;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .error {
@@ -157,4 +205,46 @@ h1 {
 }
 .image-container img {
     max-width: 100%;
+}
+
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#generated-code {
+    background-color: transparent;
+    border: 0px;
+    font-size: 50px;
+    width: 250px;
+    text-align: center;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    color: #1d1d1d;
+}
+
+#copy-success {
+    position: absolute;
+    bottom: 150px;
+    width: 100%;
+}
+
+.input {
+    margin: auto 20px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.input label {
+    padding-bottom: 10px;
+}
+
+#input-code {
+    margin: 0;
 }
